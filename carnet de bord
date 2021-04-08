@@ -13,3 +13,6 @@ passage du java au python
 objectif:
 - finir de créer la base de donnés
 -de lier la base de donnée au snake 
+
+-proposition d'amélioration :
+affichage pour indiquer les touches (z haut/q droite/s bas/d gzuche)
