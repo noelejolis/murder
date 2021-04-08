@@ -1,6 +1,7 @@
 from tkinter import *
 from random import randrange
- 
+import sqlite
+
 def move():
     global x
     global y,pX,pY
