@@ -1,6 +1,6 @@
 from tkinter import *
 from random import randrange
-import sqlite
+
 
 def move():
     global x
@@ -40,6 +40,7 @@ def move():
     test()
     test()
    
+    
     if flag != 0:
         fen.after(60, move)
  
@@ -95,7 +96,7 @@ fen = Tk()
 can = Canvas(fen, width=500, height=500, bg='black')
 can.pack(side=TOP, padx=5, pady=5)
 
-
+#size
 
 oval1=can.create_oval(Serpent[1][0], Serpent[1][1], Serpent[1][0] +10, Serpent[1][1]+10, outline='green', fill='red')
 
@@ -109,15 +110,14 @@ b1.pack(side=LEFT, padx=5, pady=5)
 b2 = Button(fen, text='Quitter', command=fen.destroy, bg='black' , fg='green')
 b2.pack(side=RIGHT, padx=5, pady =5)
 
-tex1 = Label(fen, text="Cliquez sur 'New Game' pour commencer le jeu.", bg='black' , fg='green')
+tex1 = Label(fen, text="Touches : haut=z gauche=q  bas=s droite=d", bg='black' , fg='green')
 tex1.pack(padx=0, pady=11)
+
+# texte pour indiquer les touches
 
 fen.bind('<d>', right)
 fen.bind('<q>', left)
 fen.bind('<z>' , up)
 fen.bind('<s>', down)
-
+#touches
 fen.mainloop()
-
-#size
-
