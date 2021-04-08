@@ -2,6 +2,21 @@ from tkinter import *
 from random import randrange
 import sql
 
+#sql
+conn = sql.connect('score.db')
+cursor = conn.cursor()
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS users(
+     id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,
+     name TEXT,
+     age INTERGER
+)
+""")
+conn.commit()
+
+
+
+
 def move():
     global x
     global y,pX,pY
@@ -112,7 +127,6 @@ b2.pack(side=RIGHT, padx=5, pady =5)
 
 b3 = Button(fen, text='Score', bg='black' , fg='red')
 b3.pack(side=RIGHT, padx=5, pady =5)
-#pas encore fonctionnel
 
 tex1 = Label(fen, text="Touches : haut=z gauche=q  bas=s droite=d", bg='black' , fg='green')
 tex1.pack(padx=0, pady=11)
