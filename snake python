@@ -1,7 +1,7 @@
 from tkinter import *
 from random import randrange
 import sql
-
+""
 #sql
 conn = sql.connect('score.db')
 cursor = conn.cursor()
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS users(
 )
 """)
 conn.commit()
-
+""
 
 
 
